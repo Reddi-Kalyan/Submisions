@@ -1,0 +1,37 @@
+CLI Practice DRill1:
+	1.creating given directory structure:
+		mkdir hello: It will create the hello directory in our home directory
+		cd ./hello: It will take us into the hello directory from home directory
+		mkdir five one: This command will create two new directories inside hello directory
+		cd ./five: this will take us into the five directory
+		mkdir six: this command will create a new directory named six inside the directory five
+		cd ./six: this will take us into the directory six
+		touch c.txt: this command will create a text file inside the directory six with name c.txt
+		mkdir seven: this command will create a new directory inside six as seven
+		cd ./seven: this will take us into the directory seven
+		touch error.log: this command will create a new log file with nameerror.log inside the directory seven
+		cd ~/hello/one: this will take us into the directory one which is present in hello directory
+		touch a.txt b.txt: this will create the text files a.txt and b.txt
+		mkdir two: this will create a directory called two in one
+		touch ./two/d.txt: this will create a new text file d.txt in directory two
+		mkdir ./two/three: this will create a new directory three inside two
+		touch ./two/three/e.txt: this will create a new text file e.txt inside directory three
+		mkdir ./two/three/four: this will create a new directory four inside three
+		touch ./two/three/four/access.log: finally this will create a new log file access.log inside directory four and completes our directory structure.
+		cd ~/hello: this wil take us back into the hello directory present in home directory
+		
+	2.Given operations:
+		find . -name "*.log" -delete: this will find the files inside the directory hello and its subdirectories with .log extension and deletes it.
+		cat > ./one/a.txt: this command will help us in concatenating the text to the file a.txt
+		rm -r five: this command will delete the directory five and all its subdirectories
+		mv one uno: it renames the directory one to uno
+		cd ./uno: this will take us inside the directory uno
+		mv a.txt ./two/a.txt: this will move the a.txt from uno to directory two
+
+
+CLI Practice DRill2:
+	wget https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fir e.txt: this command will download the file in current directory
+	head -3 HarryPotterandtheGobletofFire.txt: this will print three lines from starting of the file
+	tail -10 HarryPotterandtheGobletofFire.txt: this will print 10 lines from ending of the file
+	grep -o -i Harry HarryPotterandtheGobletofFire.txt | wc -l: this will give us the count of the word Harry in the file i.e,3172 similarly we can change the input word from Harry to other string for other strings count
+	sed -n '100,200p' HarryPotterandtheGobletofFire.txt: this command will print the text from line 100 to 200 in the file we can also use the command head -200 HarryPotterandtheGobletofFire.txt | tail -100 to get same output
